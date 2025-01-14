@@ -1,14 +1,13 @@
 import { Component } from "react";
-import MyCommponent from './MyCommponent';
-import Counter from "./\bCounter";
-import Say from "./Say";
-import EventPractice from "./EventPractice";
+
+import ScrollBox from "./ScrollBox";
 
 class App extends Component {
   render() {
     return (
       <>
-        <EventPractice />
+        <ScrollBox ref={(ref) => this.scrollBox = ref} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>
       </>
     );
   }
